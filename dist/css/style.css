@@ -1,0 +1,45 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.logo__container {
+  width: 100%;
+  height: 62px;
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.ohmyfood__logo img {
+  width: 156px;
+  height: 30px;
+}
+
+.location {
+  width: 100%;
+  height: 50px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location__map-marker {
+  padding-right: 15px;
+}
+.location__name {
+  font-size: 18px;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.explore-restaurants-link div {
+  width: 200px;
+  height: 50px;
+}
+
+.explore-restaurants-link div {
+  width: 200px;
+  height: 50px;
+}
+
+/*# sourceMappingURL=style.css.map */
