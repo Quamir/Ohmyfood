@@ -12,7 +12,9 @@ Ohmyfood is a new startup developing a 100% mobile-friendly site that that lists
 customers will be able to select the dishes they want for their meal so that they are ready when they arrive. No more wait times in restaurants!
 
 ---Bulit with
+
 HTML 
+
 SCSS
 
 ---Contact 
