@@ -37,9 +37,37 @@
   height: 50px;
 }
 
+.informative {
+  width: 100%;
+  height: 237px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-page-title {
+  font-size: 23px;
+}
+
+.home-page-sub-title {
+  font-size: 18px;
+  padding-left: 18px;
+  font-weight: lighter;
+  text-align: center;
+}
+
 .explore-restaurants-link div {
   width: 200px;
   height: 50px;
+  border-radius: 25px;
+  background-image: linear-gradient(#E671DA 60%, #9356DC);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.explore-restaurants-link div p {
+  color: #ffff;
 }
 
 /*# sourceMappingURL=style.css.map */
