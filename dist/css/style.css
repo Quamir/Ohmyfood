@@ -1,5 +1,82 @@
 * {
+  margin: 0;
+}
+
+/* The text-decoration: none gets rid of the underline on a tags 
+   the color: black keeps a tags from turning black  */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
   font-family: "Roboto", sans-serif;
+}
+
+.restaurant-card {
+  display: block;
+  width: 335px;
+  height: 251px;
+  border-radius: 15px;
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant-card-top {
+  width: 100%;
+  height: 65%;
+  border-radius: 15px 15px 0 0;
+  background-color: red;
+}
+.restaurant-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.restaurant-card__label {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  text-align: center;
+  background-color: #99e2d0;
+  position: relative;
+  top: -155px;
+  left: 240px;
+}
+.restaurant-card__label-text {
+  color: #008766;
+  position: relative;
+  top: 5px;
+  left: 0;
+}
+.restaurant-card-bottom {
+  width: 100%;
+  height: 35%;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurant-card__text-wrapper {
+  padding-left: 20px;
+}
+.restaurant-card__restaurant-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.restaurant-card__loc {
+  font-size: 15px;
+  font-weight: lighter;
+}
+.restaurant-card__icon {
+  padding-right: 20px;
+  font-size: 25px;
 }
 
 .logo__container {
@@ -7,7 +84,9 @@
   height: 62px;
   margin-top: 18px;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: left;
 }
 
 .ohmyfood__logo img {
@@ -20,6 +99,7 @@
   height: 50px;
   background-color: #eaeaea;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -32,18 +112,14 @@
   padding-right: 20px;
 }
 
-.explore-restaurants-link div {
-  width: 200px;
-  height: 50px;
-}
-
 .informative {
   width: 100%;
   height: 237px;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .home-page-title {
@@ -57,17 +133,114 @@
   text-align: center;
 }
 
+.explore-restaurants-link {
+  padding-bottom: 20px;
+}
 .explore-restaurants-link div {
   width: 200px;
   height: 50px;
   border-radius: 25px;
   background-image: linear-gradient(#E671DA 60%, #9356DC);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 .explore-restaurants-link div p {
   color: #ffff;
+}
+
+.instruction {
+  width: 100%;
+  height: 370px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+.instruction h2 {
+  font-size: 23px;
+  font-weight: bold;
+  text-indent: -160px;
+  padding-bottom: 10px;
+}
+
+.instruction-card-wrapper {
+  width: 341px;
+  height: 77px;
+  margin-top: 15px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+.instruction-card {
+  width: 325px;
+  height: 77px;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  transition-duration: 450ms;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.instruction-card:hover {
+  background-color: #f5edff;
+}
+.instruction-card__text {
+  font-size: 16px;
+  font-weight: bold;
+}
+.instruction-card__icon, .instruction-card__icon-2 {
+  padding-left: 40px;
+  padding-right: 20px;
+  font-size: 25px;
+}
+.instruction-card__icon-3 {
+  font-size: 20px;
+  padding-left: 40px;
+  padding-right: 20px;
+}
+.instruction-card__badge {
+  width: 32px;
+  height: 32px;
+  background-color: #9356dc;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 15px;
+  left: 20px;
+}
+.instruction-card__badge-num {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.restaurants {
+  width: 100%;
+  height: 1200px;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants h2 {
+  padding-top: 20px;
+  text-indent: -170px;
+  margin-bottom: 20px;
+  font-size: 23px;
+  font-weight: bold;
+}
+.restaurants:nth-child(4) {
+  padding-bottom: 55px;
 }
 
 /*# sourceMappingURL=style.css.map */
