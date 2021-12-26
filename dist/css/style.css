@@ -243,4 +243,29 @@ a {
   padding-bottom: 55px;
 }
 
+.footer {
+  width: 375px;
+  height: 197px;
+  background-color: #353535;
+}
+.footer__logo {
+  width: 100px;
+  color: red;
+  padding: 20px 0 0 15px;
+}
+.footer__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 10px 0 0 27px;
+}
+.footer__icon {
+  padding-right: 5px;
+}
+.footer__link {
+  color: white;
+  padding-top: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
