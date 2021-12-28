@@ -1,0 +1,15 @@
+.instruction{
+    width: 100%;
+    height: 370px;
+    margin-top: 30px;
+    @include flex(column, left,center);
+    
+
+    h2{
+        font-size: $section-title-size;
+        font-weight: bold;
+        text-indent: -160px;
+        padding-bottom: 10px;
+    }
+}
+

@@ -1,0 +1,38 @@
+// base and utilites
+@import './base/reset';
+@import './base/typography';
+@import './utils/variables';
+@import './utils/mixins';
+
+// components
+@import './components/cards';
+@import './components/icons_badges_logos';
+
+// page or sections 
+@import './layout/menu-section';
+
+@import './layout/header';
+@import './layout/informative';
+@import './layout/instrution';
+@import './layout/restaurants';
+@import './layout/footer';
+
+// componets to sections of the page 
+@import './components/button_links';
+
+
+
+.btn-order{
+    width: 185px;
+    height: 49px;
+    margin-left: 95px;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    background-image:linear-gradient(#E671DA 60%, #9356DC);
+}
+
+
+
+

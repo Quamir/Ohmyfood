@@ -1,0 +1,17 @@
+
+// link on the main page  informative section 
+.explore-restaurants-link{
+    padding-bottom: 20px;
+    div{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    background-image: linear-gradient(#E671DA 60%, #9356DC);
+    @include flex(row,center,center);
+    
+        p{
+            color:#ffff;
+        }
+    }
+
+}

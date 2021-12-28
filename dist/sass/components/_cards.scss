@@ -1,0 +1,157 @@
+// instruction card homepage 
+
+.instruction-card-wrapper{
+    width: 370px;
+    height: 77px;
+    margin-top:15px;
+    padding-right: 20px;
+    @include flex(row,left,left);
+}
+
+.instruction-card{
+    width: 325px;
+    height: 77px;
+    background-color: $primary-background-color;
+    border-radius: 15px;
+    transition-duration: 450ms; 
+    @include flex(row,left,center);
+    
+    
+    &:hover{
+        background-color:#f5edff;
+    }
+
+    &__text{
+        font-size: $primary-card-title-size - 2;
+        font-weight: bold;
+    }
+
+    &__icon , &__icon-2{
+        padding-left: 40px;
+        padding-right: 20px;
+        font-size: 25px;
+    }
+
+    &__icon-3{
+        font-size: 20px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+
+    &__badge{
+        width: 32px;
+        height: 32px;
+        background-color: $primary-color;
+        border-radius: 15px;
+        @include flex(column,center,center);
+        @include pos(relative,15px,20px);
+        
+    }
+
+    &__badge-num{
+        font-weight: bold;
+        color: #ffffff;
+    }
+}
+
+
+// restaurant card the card used on the main page 
+.restaurant-card{
+    display: block;
+    width: 335px;
+    height: 251px;
+    border-radius: 15px;
+    margin-top: 2px;
+    @include flex(column,center,center);
+
+    &-top{
+        width: 100%;
+        height: 65%;
+        border-radius: 15px 15px 0 0;
+    }
+
+    &__img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    &__label{
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+        background-color: red;
+        text-align: center;
+        background-color: $tertiary-color;
+        @include pos(relative,-155px,240px);
+    }
+
+    &__label-text{
+        color: #008766;
+        @include pos(relative,5px,0);
+    }
+
+    &-bottom{
+        width: 100%;
+        height: 35%;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
+        @include flex(row,space-between,center);
+        
+    }
+
+    &__text-wrapper{
+        padding-left:20px;
+    }
+
+    &__restaurant-name{
+        @include font($primary-card-title-size,bold);
+    }
+
+    &__loc{
+        @include font($primary-card-subtext-size,lighter);
+    }
+
+    &__icon{
+        padding-right: 20px;
+        font-size: 25px;
+    }
+} 
+
+// primary card use on the restaurnat pages 
+
+.primary-card{
+
+    &__wrapper{
+        width: 100%;
+        height: max-content;
+        margin-bottom: 20px;
+        @include flex(column,space-between,center);
+    }
+
+    width: 350px;
+    height: 70px;
+    background-color: #ffff;
+    border-radius: 15px;
+    @include flex(row,space-between,center);
+
+    &__text{
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    &__sub-text{
+        font-size: $primary-card-subtext-size;
+    }
+
+    &__title{
+        padding-bottom: 5px;
+    }
+
+    &__price{
+        padding-right: 20px;
+        padding-top: 25px;
+    }
+}
+
