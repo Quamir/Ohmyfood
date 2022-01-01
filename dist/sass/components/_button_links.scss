@@ -6,7 +6,7 @@
     width: 200px;
     height: 50px;
     border-radius: 25px;
-    background-image: linear-gradient(#E671DA 60%, #9356DC);
+    background-image: $primary-gradient;
     @include flex(row,center,center);
     
         p{
@@ -21,8 +21,9 @@
     height: 49px;
     margin-left: 95px;
     border: none;
+    font-size: $btn-text-size;
     border-radius: 20px;
     color: #ffffff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    background-image:linear-gradient(#E671DA 60%, #9356DC);
+    background-image: $primary-gradient;
 }

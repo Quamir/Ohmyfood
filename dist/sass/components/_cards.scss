@@ -104,6 +104,8 @@
         padding-right: 20px;
         font-size: 25px;
     }
+
+    
 } 
 
 // primary card use on the restaurnat pages 
@@ -121,6 +123,7 @@
     height: 70px;
     background-color: #ffff;
     border-radius: 15px;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
     @include flex(row,space-between,center);
 
     &__text{
@@ -140,5 +143,32 @@
         padding-right: 20px;
         padding-top: 25px;
     }
+
+   
+    .dish-selection{
+
+        width: 95px;
+        height: 100%;
+        background-color: $tertiary-color;
+        border-radius: 0 15px 15px 0;
+        
+        @include flex(row,center,center);
+
+        &__circle{
+            width: 40px;
+            height: 40px;
+            background-color: #ffff;
+            border-radius: 25px;
+            @include flex(row,center,center);
+        }
+
+        &__icon{
+            font-size: 20px;
+            color: $tertiary-color;
+        }
+
+    }
+
+    @include ghost-card-animation;   
 }
 

@@ -1,0 +1,29 @@
+
+// Frebch google translate Apparition progressive --> Gradual onset 
+// Apparition in english means ghost 
+
+@mixin ghost-card-animation{
+
+
+    animation-name: ghost;
+    animation-duration: 1200ms;
+    animation-timing-function: ease-out;
+
+    @keyframes ghost{
+        0%{
+            opacity: 0;
+        }
+    
+        25%{
+            opacity: 25%;
+        }
+    
+        50%{
+            opacity: 50%;
+        }
+    
+        100%{
+            opacity:100%;
+        }
+    }
+}

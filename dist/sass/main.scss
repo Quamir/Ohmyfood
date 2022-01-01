@@ -1,8 +1,11 @@
-// base and utilites
+// base 
 @import './base/reset';
 @import './base/typography';
+
+// utilites
 @import './utils/variables';
 @import './utils/mixins';
+@import './utils/animations';
 
 // components
 @import './components/logos';
