@@ -1,0 +1,37 @@
+// the back arrow on the header
+.header-back-arrow{
+    font-size: 23px;
+    padding-left: 10px;
+}
+
+// map marker for the location section of the header on the home page 
+.location__map-marker{
+    padding-right: 15px;
+}
+
+//  styling for the 3 icons in instruction buttons on the home page 
+.instruction-card{
+
+    &__icon{
+        padding-left: 40px;
+        padding-right: 20px;
+        font-size: 25px;
+    }
+
+    &__icon-2{
+        width: 90px;
+        height: 30px;
+        padding-left: 20px;
+    }
+
+    &__icon-3{
+        font-size: 20px;
+        padding-left: 40px;
+        padding-right: 20px;
+    }
+}
+
+//  styling for footer icons  
+.footer__icon{
+    padding-right: 5px;
+}

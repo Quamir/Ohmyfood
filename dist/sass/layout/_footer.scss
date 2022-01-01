@@ -1,22 +1,13 @@
 .footer{
+    
     width: 375px;
     height: 197px;
     background-color: $footer-color;
 
-    &__logo{
-        width: 100px;
-        color:red;
-        padding: 20px 0 0 15px;
-    }
-    
     &__text-wrapper{
         width: max-content;
         padding: 10px 0 0 27px;
         @include flex(column,left,left);
-    }
-
-    &__icon{
-        padding-right: 5px;
     }
 
     &__link{

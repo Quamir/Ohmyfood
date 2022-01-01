@@ -1,13 +1,5 @@
 // instruction card homepage 
 
-.instruction-card-wrapper{
-    width: 370px;
-    height: 77px;
-    margin-top:15px;
-    padding-right: 20px;
-    @include flex(row,left,left);
-}
-
 .instruction-card{
     width: 325px;
     height: 77px;
@@ -15,44 +7,39 @@
     border-radius: 15px;
     transition-duration: 450ms; 
     @include flex(row,left,center);
-    
+
+    &-wrapper{
+        width: 370px;
+        height: 77px;
+        margin-top:15px;
+        padding-right: 20px;
+        @include flex(row,left,left);
+    }
     
     &:hover{
         background-color:#f5edff;
+        color:#f5edff;
+
+        i{
+            color: #9356dc;
+        }   
+
+        img{
+            filter: invert(60%) sepia(59%) saturate(6396%) hue-rotate(239deg) brightness(88%) contrast(95%);
+        }
+
+        p{
+            color: black;
+        }
+        
     }
 
     &__text{
         font-size: $primary-card-title-size - 2;
         font-weight: bold;
     }
-
-    &__icon , &__icon-2{
-        padding-left: 40px;
-        padding-right: 20px;
-        font-size: 25px;
-    }
-
-    &__icon-3{
-        font-size: 20px;
-        padding-left: 40px;
-        padding-right: 20px;
-    }
-
-    &__badge{
-        width: 32px;
-        height: 32px;
-        background-color: $primary-color;
-        border-radius: 15px;
-        @include flex(column,center,center);
-        @include pos(relative,15px,20px);
-        
-    }
-
-    &__badge-num{
-        font-weight: bold;
-        color: #ffffff;
-    }
 }
+
 
 
 // restaurant card the card used on the main page 

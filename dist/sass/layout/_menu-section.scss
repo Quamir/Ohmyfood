@@ -25,9 +25,8 @@
         &-container{
             height: 285px;
         }
-        padding-top: 30px;
+        padding-top: 25px;
         padding-left: 10px;
-        font-style: italic;
         padding-bottom: 20px;
         background-color: $primary-background-color;
         border-radius: 35px 35px 0 0;
@@ -54,8 +53,10 @@
 }
 
 .page-like{
-    padding-right: 40px;
+    padding-top: 10px;
+    padding-right: 15px;
     font-size: 30px;
+    align-self: start;
 }
 
 .section-title::after{

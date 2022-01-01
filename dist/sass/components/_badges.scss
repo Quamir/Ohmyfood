@@ -1,0 +1,13 @@
+.instruction-card__badge{
+    width: 32px;
+    height: 32px;
+    background-color: $primary-color;
+    border-radius: 15px;
+    @include flex(column,center,center);
+    @include pos(relative,15px,20px);
+
+    &-num{
+    font-weight: bold;
+    color: #ffffff;
+    }
+}

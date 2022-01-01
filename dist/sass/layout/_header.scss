@@ -7,10 +7,6 @@
 
 .header-flex-wrapper{
     @include flex(row,center,center);
-    
-    .ohmyfood__logo img{
-        padding-right: 20px; 
-    }
 }
 
 .location{
