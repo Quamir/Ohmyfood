@@ -444,7 +444,7 @@ div.menu__card-wrapper:nth-child(3) {
 .informative {
   width: 100%;
   height: 237px;
-  background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center center/cover;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -458,6 +458,9 @@ div.menu__card-wrapper:nth-child(3) {
   align-items: center;
 }
 @media (min-width: 1366px) {
+  .informative {
+    background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center center/cover;
+  }
   .informative-wrapper {
     width: 45%;
     height: 100%;
@@ -528,8 +531,18 @@ div.menu__card-wrapper:nth-child(3) {
 
 .restaurants {
   width: 100%;
-  height: 1200px;
+  height: 1220px;
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.restaurants-wrapper {
+  width: 100%;
+  height: 95%;
+  padding-top: 30px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -537,6 +550,7 @@ div.menu__card-wrapper:nth-child(3) {
 }
 .restaurants h2 {
   width: max-content;
+  padding: 15px;
   position: relative;
   top: 25px;
   left: -100px;
@@ -591,11 +605,13 @@ div.menu__card-wrapper:nth-child(3) {
   padding-top: 5px;
 }
 
-.home-page-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+@media (min-width: 1366px) {
+  .home-page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
