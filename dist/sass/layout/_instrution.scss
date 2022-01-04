@@ -4,11 +4,20 @@
     margin-top: 30px;
     @include flex(column, left,center);
     
+    &-wrapper{
+        width: 370px;
+        height: 77px;
+        margin-top:15px;
+        padding-right: 20px;
+        @include flex(row,left,left);
+    }
 
     h2{
+        width: 100%;
         font-size: $section-title-size;
         font-weight: bold;
-        text-indent: -160px;
+        text-align: left;
+        padding-left: 30px;
         padding-bottom: 10px;
     }
 }

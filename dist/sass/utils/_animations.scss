@@ -23,33 +23,4 @@
     }
 }
 
-// animation for selectig a dsih from a restaurant menu
-@mixin dish-selec-animation{
 
-    @keyframes expand-div{
-
-    from{
-        width: 0;
-    }
- 
-    to{
-    width: 94px;
-        }
-    }
- 
-    @keyframes spin-check {
-        0% {
-            transform: rotate( 0deg );
-        }
-        10% {
-            transform: rotate( 15deg );
-        }
-        50% {
-            transform: rotate( -180deg );
-        }
-        100% {
-             transform: rotate( -360deg );
-        }
-     }
-
-}

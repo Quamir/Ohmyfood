@@ -35,7 +35,7 @@ button {
   padding: 20px 0 0 13px;
 }
 
-.instruction-card__badge {
+.instruction-wrapper__badge {
   width: 32px;
   height: 32px;
   background-color: #9356dc;
@@ -48,7 +48,7 @@ button {
   top: 15px;
   left: 20px;
 }
-.instruction-card__badge-num {
+.instruction-wrapper__badge-num {
   font-weight: bold;
   color: #ffffff;
 }
@@ -63,6 +63,24 @@ button {
   width: 125px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(353deg) brightness(108%) contrast(102%);
   padding: 20px 0 0 13px;
+}
+
+.restaurant-card__label {
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: red;
+  text-align: center;
+  background-color: #99e2d0;
+  position: relative;
+  top: -155px;
+  left: 240px;
+}
+.restaurant-card__label-text {
+  color: #008766;
+  position: relative;
+  top: 5px;
+  left: 0;
 }
 
 .explore-restaurants-link {
@@ -80,6 +98,35 @@ button {
 }
 .explore-restaurants-link div p {
   color: #ffff;
+}
+
+.instruction-btn {
+  width: 325px;
+  height: 77px;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  transition-duration: 450ms;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+.instruction-btn:hover {
+  background-color: #f5edff;
+  color: #f5edff;
+}
+.instruction-btn:hover i {
+  color: #9356dc;
+}
+.instruction-btn:hover img {
+  filter: invert(60%) sepia(59%) saturate(6396%) hue-rotate(239deg) brightness(88%) contrast(95%);
+}
+.instruction-btn:hover p {
+  color: black;
+}
+.instruction-btn__text {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .btn-order {
@@ -103,63 +150,50 @@ button {
   padding-right: 15px;
 }
 
-.instruction-card__icon {
+.instruction-btn__icon {
+  color: #7e7e7e;
+}
+.instruction-btn__icon-1 {
   padding-left: 40px;
   padding-right: 20px;
   font-size: 25px;
 }
-.instruction-card__icon-2 {
+.instruction-btn__icon-2 {
   width: 90px;
   height: 30px;
   padding-left: 20px;
 }
-.instruction-card__icon-3 {
+.instruction-btn__icon-3 {
   font-size: 20px;
   padding-left: 40px;
   padding-right: 20px;
 }
 
-.footer__icon {
-  padding-right: 5px;
+.restaurant-card__icon {
+  padding-right: 20px;
+  font-size: 25px;
 }
 
-.instruction-card {
-  width: 325px;
-  height: 77px;
-  background-color: #f6f6f6;
-  border-radius: 15px;
-  transition-duration: 450ms;
+.dish-selection__icon {
+  color: #99e2d0;
+  font-size: 25px;
+}
+.dish-selection__circle {
+  visibility: hidden;
+  width: 40px;
+  height: 40px;
+  background-color: #ffff;
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
+  transition-delay: 350ms;
+  transition: all 0.4s ease-in;
 }
-.instruction-card-wrapper {
-  width: 370px;
-  height: 77px;
-  margin-top: 15px;
-  padding-right: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: left;
-}
-.instruction-card:hover {
-  background-color: #f5edff;
-  color: #f5edff;
-}
-.instruction-card:hover i {
-  color: #9356dc;
-}
-.instruction-card:hover img {
-  filter: invert(60%) sepia(59%) saturate(6396%) hue-rotate(239deg) brightness(88%) contrast(95%);
-}
-.instruction-card:hover p {
-  color: black;
-}
-.instruction-card__text {
-  font-size: 16px;
-  font-weight: bold;
+
+.footer__icon {
+  padding-right: 5px;
 }
 
 .restaurant-card {
@@ -184,23 +218,6 @@ button {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.restaurant-card__label {
-  width: 80px;
-  height: 30px;
-  border-radius: 5px;
-  background-color: red;
-  text-align: center;
-  background-color: #99e2d0;
-  position: relative;
-  top: -155px;
-  left: 240px;
-}
-.restaurant-card__label-text {
-  color: #008766;
-  position: relative;
-  top: 5px;
-  left: 0;
-}
 .restaurant-card-bottom {
   width: 100%;
   height: 35%;
@@ -221,10 +238,6 @@ button {
 .restaurant-card__loc {
   font-size: 15px;
   font-weight: lighter;
-}
-.restaurant-card__icon {
-  padding-right: 20px;
-  font-size: 25px;
 }
 
 .primary-card {
@@ -282,33 +295,16 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-.primary-card .dish-selection__circle {
-  visibility: hidden;
-  width: 40px;
-  height: 40px;
-  background-color: #ffff;
-  border-radius: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.primary-card .dish-selection__icon {
-  font-size: 20px;
-  color: #99e2d0;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in;
 }
 .primary-card:hover > .dish-selection {
-  animation-name: expand-div;
-  animation-duration: 0.7s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
+  width: 94px;
 }
 .primary-card:hover > .dish-selection > div {
   visibility: visible;
-  animation: spin-check;
-  animation-timing-function: ease-out;
-  animation-duration: 0.7s;
+  transform: rotate(-360deg);
 }
 
 @keyframes ghost {
@@ -323,28 +319,6 @@ button {
   }
   100% {
     opacity: 100%;
-  }
-}
-@keyframes expand-div {
-  from {
-    width: 0;
-  }
-  to {
-    width: 94px;
-  }
-}
-@keyframes spin-check {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(-360deg);
   }
 }
 .restaurant-img {
@@ -489,10 +463,22 @@ div.menu__card-wrapper:nth-child(3) {
   justify-content: left;
   align-items: center;
 }
+.instruction-wrapper {
+  width: 370px;
+  height: 77px;
+  margin-top: 15px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
 .instruction h2 {
+  width: 100%;
   font-size: 23px;
   font-weight: bold;
-  text-indent: -160px;
+  text-align: left;
+  padding-left: 30px;
   padding-bottom: 10px;
 }
 

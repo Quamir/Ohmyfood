@@ -1,47 +1,5 @@
 // instruction card homepage 
 
-.instruction-card{
-    width: 325px;
-    height: 77px;
-    background-color: $primary-background-color;
-    border-radius: 15px;
-    transition-duration: 450ms; 
-    @include flex(row,left,center);
-
-    &-wrapper{
-        width: 370px;
-        height: 77px;
-        margin-top:15px;
-        padding-right: 20px;
-        @include flex(row,left,left);
-    }
-    
-    &:hover{
-        background-color:#f5edff;
-        color:#f5edff;
-
-        i{
-            color: #9356dc;
-        }   
-
-        img{
-            filter: invert(60%) sepia(59%) saturate(6396%) hue-rotate(239deg) brightness(88%) contrast(95%);
-        }
-
-        p{
-            color: black;
-        }
-        
-    }
-
-    &__text{
-        font-size: $primary-card-title-size - 2;
-        font-weight: bold;
-    }
-}
-
-
-
 // restaurant card the card used on the main page 
 .restaurant-card{
     display: block;
@@ -64,21 +22,7 @@
         border-radius: 15px 15px 0 0;
     }
 
-    &__label{
-        width: 80px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: red;
-        text-align: center;
-        background-color: $tertiary-color;
-        @include pos(relative,-155px,240px);
-    }
-
-    &__label-text{
-        color: #008766;
-        @include pos(relative,5px,0);
-    }
-
+   
     &-bottom{
         width: 100%;
         height: 35%;
@@ -100,12 +44,6 @@
         @include font($primary-card-subtext-size,lighter);
     }
 
-    &__icon{
-        padding-right: 20px;
-        font-size: 25px;
-    }
-
-    
 } 
 
 // primary card use on the restaurnat pages 
@@ -166,42 +104,25 @@
         border-radius: 0 15px 15px 0; 
         @include flex(row,center,center);
 
-        &__circle{
-            visibility: hidden;
-            width: 40px;
-            height: 40px;
-            background-color: #ffff;
-            border-radius: 25px;
-            @include flex(row,center,center);
-        }
-
-        &__icon{
-            font-size: 20px;
-            color: $tertiary-color;
-        }
-
+        transition-property: width;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in;
+    
     }
 
     &:hover > .dish-selection{
-
-        animation-name: expand-div;
-        animation-duration: 0.7s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-
+        width: 94px;
+        
     }
 
     &:hover > .dish-selection > div{
         visibility: visible;
-        animation: spin-check;
-        animation-timing-function: ease-out;
-        animation-duration: 0.7s;
-
+        transform: rotate(-360deg);
     }
 
 }
 
 // Keyframe animations 
 @include ghost-card-animation;   
-@include dish-selec-animation;
+
 

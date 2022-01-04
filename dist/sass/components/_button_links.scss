@@ -16,6 +16,43 @@
 
 }
 
+// instruction buttons
+
+.instruction-btn{
+    width: 325px;
+    height: 77px;
+    background-color: $primary-background-color;
+    border-radius: 15px;
+    transition-duration: 450ms; 
+    @include flex(row,left,center);
+
+        
+    &:hover{
+        background-color:#f5edff;
+        color:#f5edff;
+
+        i{
+            color: #9356dc;
+        }   
+
+        img{
+            filter: invert(60%) sepia(59%) saturate(6396%) hue-rotate(239deg) brightness(88%) contrast(95%);
+        }
+
+        p{
+            color: black;
+        }
+        
+    }
+
+    &__text{
+        font-size: $primary-card-title-size - 2;
+        font-weight: bold;
+    }
+}
+
+// order button on the restaurant pages 
+
 .btn-order{
     width: 185px;
     height: 49px;

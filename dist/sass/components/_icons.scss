@@ -10,14 +10,20 @@
 }
 
 //  styling for the 3 icons in instruction buttons on the home page 
-.instruction-card{
 
+.instruction-btn{
+    //  !IMPORTANT          The second icons color is change through the SVG fill in XML 3844472_hamburger
     &__icon{
+        color: #7e7e7e;
+    }
+
+    &__icon-1{
         padding-left: 40px;
         padding-right: 20px;
         font-size: 25px;
     }
 
+    // 3844472_hamburger each stroke in SVG file must be change to match rest of icons 
     &__icon-2{
         width: 90px;
         height: 30px;
@@ -30,6 +36,36 @@
         padding-right: 20px;
     }
 }
+
+// icon for liking a restaurant on the restaurant card 
+
+.restaurant-card__icon{
+    padding-right: 20px;
+    font-size: 25px;
+}
+
+// icon for selecting a dish on a restaurant menu
+
+.dish-selection{
+
+    &__icon{
+        color: $tertiary-color;
+        font-size: 25px;
+    }
+    
+    &__circle{
+        visibility: hidden;
+        width: 40px;
+        height: 40px;
+        background-color: #ffff;
+        border-radius: 25px;
+        @include flex(row,center,center);
+
+        transition-delay: 350ms;
+        transition: all 0.4s ease-in;
+    }
+}
+
 
 //  styling for footer icons  
 .footer__icon{
