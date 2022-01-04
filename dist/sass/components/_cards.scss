@@ -44,6 +44,9 @@
         @include font($primary-card-subtext-size,lighter);
     }
 
+    @include breakpoint-up(desktop){
+        width: 450px;
+    }
 } 
 
 // primary card use on the restaurnat pages 

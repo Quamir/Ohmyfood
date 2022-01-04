@@ -4,12 +4,36 @@
     background-color: $primary-background-color;
     @include flex(column,space-between,center);
 
+   
     h2{
+        width: max-content;
         @include pos(relative,25px,-100px);
         @include font($section-title-size, bold);
     }
 
     &:nth-child(4){
         padding-bottom: 55px;
+    }
+
+    @include breakpoint-up(desktop){
+        @include flex(row,space-between,center);
+        flex-wrap: wrap;
+        width: 70%;
+        height: max-content;
+
+        &-wrapper{
+            height: 700px;
+            padding: 40px;
+            @include flex(row,space-between,space-between);
+            flex-wrap: wrap;
+        }
+    
+
+        h2{
+            position: unset;
+           align-self: start;
+           padding-top: 30px;
+           padding-left: 30px;
+        }
     }
 }

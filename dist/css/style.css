@@ -69,7 +69,6 @@ button {
   width: 80px;
   height: 30px;
   border-radius: 5px;
-  background-color: red;
   text-align: center;
   background-color: #99e2d0;
   position: relative;
@@ -81,6 +80,13 @@ button {
   position: relative;
   top: 5px;
   left: 0;
+}
+@media (min-width: 1366px) {
+  .restaurant-card__label {
+    position: relative;
+    top: -150px;
+    left: 350px;
+  }
 }
 
 .explore-restaurants-link {
@@ -239,6 +245,11 @@ button {
   font-size: 15px;
   font-weight: lighter;
 }
+@media (min-width: 1366px) {
+  .restaurant-card {
+    width: 450px;
+  }
+}
 
 .primary-card {
   width: 350px;
@@ -332,7 +343,6 @@ button {
   height: max-content;
   padding-bottom: 55px;
   background-color: #f6f6f6;
-  transition: translateX(200%);
 }
 .menu__card-wrapper {
   height: max-content;
@@ -434,11 +444,35 @@ div.menu__card-wrapper:nth-child(3) {
 .informative {
   width: 100%;
   height: 237px;
-  background-color: #f6f6f6;
+  background: url("../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.informative-wrapper {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 1366px) {
+  .informative-wrapper {
+    width: 45%;
+    height: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-left: 50px;
+    border-bottom: 7px solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 53% 0, 100% 100%, 0% 100%);
+  }
+  .informative-wrapper h2 {
+    padding: unset;
+  }
 }
 
 .home-page-title {
@@ -481,6 +515,16 @@ div.menu__card-wrapper:nth-child(3) {
   padding-left: 30px;
   padding-bottom: 10px;
 }
+@media (min-width: 1366px) {
+  .instruction {
+    width: 30%;
+    justify-content: space-between;
+    align-self: flex-start;
+  }
+  .instruction h2 {
+    text-indent: 50px;
+  }
+}
 
 .restaurants {
   width: 100%;
@@ -492,6 +536,7 @@ div.menu__card-wrapper:nth-child(3) {
   align-items: center;
 }
 .restaurants h2 {
+  width: max-content;
   position: relative;
   top: 25px;
   left: -100px;
@@ -501,9 +546,35 @@ div.menu__card-wrapper:nth-child(3) {
 .restaurants:nth-child(4) {
   padding-bottom: 55px;
 }
+@media (min-width: 1366px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: max-content;
+  }
+  .restaurants-wrapper {
+    height: 700px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-wrap: wrap;
+  }
+  .restaurants h2 {
+    position: unset;
+    align-self: start;
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+}
 
 .footer {
-  width: 375px;
+  width: 100%;
   height: 197px;
   background-color: #353535;
 }
@@ -518,6 +589,13 @@ div.menu__card-wrapper:nth-child(3) {
 .footer__link {
   color: white;
   padding-top: 5px;
+}
+
+.home-page-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

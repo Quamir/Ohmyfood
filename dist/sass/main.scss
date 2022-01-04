@@ -6,6 +6,7 @@
 @import './utils/variables';
 @import './utils/mixins';
 @import './utils/animations';
+@import './utils/breakpoints';
 
 // components
 @import './components/logos';
@@ -23,6 +24,8 @@
 @import './layout/instrution';
 @import './layout/restaurants';
 @import './layout/footer';
+
+@import './layout/home-page-content';
 
 
 

@@ -4,14 +4,19 @@
         width: 80px;
         height: 30px;
         border-radius: 5px;
-        background-color: red;
         text-align: center;
         background-color: $tertiary-color;
         @include pos(relative,-155px,240px);
+
+        &-text{
+            color: #008766;
+            @include pos(relative,5px,0);
+        }
+
+        @include breakpoint-up(desktop){
+            @include pos(relative,-150px,350px);
+        }
     }
 
-    &__label-text{
-        color: #008766;
-        @include pos(relative,5px,0);
-    }
+   
 }
