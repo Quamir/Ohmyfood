@@ -36,12 +36,32 @@
             flex-wrap: wrap;
         }
     
-
         h2{
-            position: unset;
+           position: unset;
            align-self: start;
            padding-top: 30px;
            padding-left: 30px;
         }
     }
+
+
+
+    @include breakpoint-min-max(tablet,1300px){
+        
+        @include breakpoint-up(tablet){
+            height: max-content;
+            justify-content: start;
+    
+            h2{
+              position: unset;
+            }
+    
+            &-wrapper{
+                width: 90%;
+                height: 1200px;
+            }
+        }
+    }
+
+   
 }

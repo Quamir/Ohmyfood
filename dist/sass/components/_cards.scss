@@ -44,8 +44,14 @@
         @include font($primary-card-subtext-size,lighter);
     }
 
+    // media queries
     @include breakpoint-up(desktop){
         width: 450px;
+    }
+
+
+    @include breakpoint-min-max(tablet,1300px){
+        width: 90%;
     }
 } 
 
@@ -71,20 +77,27 @@
     @include flex(row,space-between,center);
 
     &__text{
+
+        width: 45%;
+        height: 100%;
         flex-grow: 1;
         text-align: start;
         padding-left: 13px;
         padding-top: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        white-space: nowrap;
+
     }
 
 
     &__sub-text{
+
+        width: 95%;
         font-size: $primary-card-subtext-size;
-        height: 15px;
-        display: inline-block;
         overflow: hidden;
         text-overflow: ellipsis;
-        word-wrap: break-word;
     }
 
     &__title{
@@ -92,16 +105,17 @@
     }
 
     &__price{
-      
+       
         text-align: end;
         padding-top: 25px;
+        padding-left: 5px;
         padding-right: 20px;
         font-weight: bold;
     }
 
     .dish-selection{
-
-        width: 0px;
+       
+        width: 0;
         height: 100%;
         background-color: $tertiary-color;
         border-radius: 0 15px 15px 0; 
@@ -113,15 +127,46 @@
     
     }
 
+    &:hover{
+        cursor: pointer;
+    }
+
     &:hover > .dish-selection{
-        width: 94px;
-        
+        width: 30%;
+    }
+
+    &:hover .primary-card__sub-text{
+
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &:hover > .dish-selection > div{
         visibility: visible;
         transform: rotate(-360deg);
     }
+
+
+    @include breakpoint-up(desktop){
+        .section-title{
+            color: red;
+        }
+    }
+
+    @include breakpoint-min-max(tablet,1300px){
+        width: 70%;
+
+        &__title{
+            font-size: 20px;
+        }
+
+        &__sub-text{
+            font-size: $primary-card-subtext-size + 4;
+
+        }
+    }
+    
+   
 
 }
 

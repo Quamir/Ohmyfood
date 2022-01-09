@@ -2,14 +2,24 @@
     width: 100%;
     height: 254px;
     object-fit: cover;
+
+    
+    @include breakpoint-up(desktop){
+        width: 90%;
+        margin-left: 5%;
+        border-radius: 15px;
+        justify-self: center;
+    }
 }
 
 .menu{
 
     &__card-wrapper{
         height: max-content;
+        padding-top: 50px;
         @include flex(column,space-between,center);
     }
+
 
     width: 100%;
     height: max-content;
@@ -33,17 +43,51 @@
         margin-bottom: -60px;
         @include pos(relative,-60px,0);
         @include flex(row,space-between,center);
+
     }
 
     &-title-text{
         flex-grow: 1;
     }
 
+    @include breakpoint-up(desktop){
+
+       @include flex(row,space-between,center);
+       flex-wrap: wrap;
+
+       &__card-wrapper{
+           width: 500px;
+           padding-top: unset;
+           margin-top: 70px;
+       }
+
+
+       background-color: unset;
+
+       &-title{
+        position: unset ;
+        padding-left: 20px;
+        border-radius: 0;
+        background-color: unset;
+
+            &-text{
+                flex-grow: unset;
+            }
+        }
+
+    }
+
 }
 
 .page-title{
+    min-width: 250px;
+    // padding-left: 100px;
     @include font($page-title-size, bolder);
     
+    @include breakpoint-up(desktop){
+        padding-left: 60px;
+        padding-right: 30px;
+    }
 }
 
 .section-title{
@@ -51,6 +95,10 @@
     padding-left: 20px;
     padding-bottom: 15px;
     @include font($page-subtitle,lighter);
+
+    @include breakpoint-up(desktop){
+        padding-left: 90px
+    }
 }
 
 .page-like{
@@ -58,6 +106,11 @@
     padding-right: 15px;
     font-size: 30px;
     align-self: start;
+
+    @include breakpoint-up(desktop){
+       flex-grow: 1;
+       margin-left: auto;
+    }
 }
 
 .section-title::after{
@@ -72,4 +125,11 @@
 div.menu__card-wrapper:nth-child(3){
    padding-bottom: 30px ;
   }
+
+
+  @include breakpoint-min-max(tablet,1300px){
+   .section-title{
+       margin-left: 13%;
+   }
+}
   

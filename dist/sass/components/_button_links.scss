@@ -49,6 +49,10 @@
         font-size: $primary-card-title-size - 2;
         font-weight: bold;
     }
+
+    @include breakpoint-up(tablet){
+        width: 87%;
+    }
 }
 
 // order button on the restaurant pages 
@@ -63,4 +67,13 @@
     color: #ffffff;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     background-image: $primary-gradient;
+
+
+    @include breakpoint-up(desktop){
+       margin: auto;
+    }
+
+    @include breakpoint-min-max(tablet,1300px){
+        margin-left: 35%;
+    }
 }

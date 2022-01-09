@@ -16,6 +16,10 @@
         @include breakpoint-up(desktop){
             @include pos(relative,-150px,350px);
         }
+
+        @include  breakpoint-min-max(tablet,1300px){
+            @include pos(relative, -140px, 500px);
+        }
     }
 
    
