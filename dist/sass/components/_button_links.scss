@@ -7,6 +7,7 @@
     height: 50px;
     border-radius: 25px;
     background-image: $primary-gradient;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     @include flex(row,center,center);
     
         p{
@@ -24,12 +25,15 @@
     background-color: $primary-background-color;
     border-radius: 15px;
     transition-duration: 450ms; 
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     @include flex(row,left,center);
 
         
     &:hover{
         background-color:#f5edff;
         color:#f5edff;
+
+        cursor: pointer;
 
         i{
             color: #9356dc;
@@ -38,16 +42,13 @@
         img{
             filter: invert(60%) sepia(59%) saturate(6396%) hue-rotate(239deg) brightness(88%) contrast(95%);
         }
-
-        p{
-            color: black;
-        }
         
     }
 
     &__text{
-        font-size: $primary-card-title-size - 2;
+        font-size: $primary-card-title-size - 3;
         font-weight: bold;
+        color: black;
     }
 
     @include breakpoint-up(tablet){
@@ -60,7 +61,8 @@
 .btn-order{
     width: 185px;
     height: 49px;
-    margin-left: 95px;
+    margin-top: 20px;
+    margin-left: 25%;
     border: none;
     font-size: $btn-text-size;
     border-radius: 20px;
@@ -68,12 +70,19 @@
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     background-image: $primary-gradient;
 
+    &:hover{
+        cursor: pointer;
+    }
+
 
     @include breakpoint-up(desktop){
-       margin: auto;
+      margin-top:50px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @include breakpoint-min-max(tablet,1300px){
+        margin-top: 50px;
         margin-left: 35%;
     }
 }

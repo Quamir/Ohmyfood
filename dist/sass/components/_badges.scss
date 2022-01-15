@@ -1,14 +1,27 @@
 .instruction-wrapper__badge{
-    width: 32px;
+    width: 39px;
     height: 32px;
     background-color: $primary-color;
-    border-radius: 15px;
+    border-radius: 20px;
     @include flex(column,center,center);
-    @include pos(relative,15px,20px);
+    @include pos(relative,20%,4%);
 
     &-num{
     font-weight: bold;
     color: #ffffff;
     }
+
+    @include breakpoint-up(desktop){
+        width: 32px;
+        height: 32px;
+        @include pos(relative,25%,4%);
+     }
+
+     @include breakpoint-min-max(tablet,1300px){
+        width: 35px;
+        height: 35px;
+        margin-right: 10%;
+        @include pos(relative,30%,-2%);
+     }
 }
 

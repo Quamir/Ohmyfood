@@ -2,16 +2,17 @@
 
 // restaurant card the card used on the main page 
 .restaurant-card{
-    display: block;
-    width: 335px;
+    width: 90%;
     height: 251px;
+    padding-bottom: 5%;
     border-radius: 15px;
     margin-top: 2px;
+    
     @include flex(column,center,center);
 
     &-top{
         width: 100%;
-        height: 65%;
+        height: 70%;
         border-radius: 15px 15px 0 0;
     }
 
@@ -25,7 +26,7 @@
    
     &-bottom{
         width: 100%;
-        height: 35%;
+        height: 30%;
         border-radius: 0 0 15px 15px;
         box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
         @include flex(row,space-between,center);
@@ -44,20 +45,23 @@
         @include font($primary-card-subtext-size,lighter);
     }
 
-    // media queries
+
     @include breakpoint-up(desktop){
-        width: 450px;
+        width: 47%;
+        height: 40%;
+        padding: unset;
     }
 
-
     @include breakpoint-min-max(tablet,1300px){
-        width: 90%;
+      width: 90%;
+      height: 350px;
+      padding: 2%;
     }
 } 
 
 // primary card use on the restaurnat pages 
 
-.primary-card{
+.menu-card{
 
     &__wrapper{
         width: 100%;
@@ -91,17 +95,18 @@
 
     }
 
-
-    &__sub-text{
-
-        width: 95%;
-        font-size: $primary-card-subtext-size;
+    &__title{
+        padding-bottom: 5px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    &__title{
-        padding-bottom: 5px;
+
+    &__sub-text{
+        width: 95%;
+        font-size: $primary-card-subtext-size;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__price{
@@ -113,8 +118,7 @@
         font-weight: bold;
     }
 
-    .dish-selection{
-       
+    &__dish-selection{
         width: 0;
         height: 100%;
         background-color: $tertiary-color;
@@ -124,24 +128,23 @@
         transition-property: width;
         transition-duration: 0.5s;
         transition-timing-function: ease-in;
-    
     }
 
     &:hover{
         cursor: pointer;
     }
 
-    &:hover > .dish-selection{
+    &:hover > .menu__dish-selection{
         width: 30%;
     }
 
-    &:hover .primary-card__sub-text{
+    &:hover .menu-card__sub-text{
 
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
-    &:hover > .dish-selection > div{
+    &:hover > .menu__dish-selection > div{
         visibility: visible;
         transform: rotate(-360deg);
     }

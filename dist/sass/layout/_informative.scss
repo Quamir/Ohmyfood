@@ -34,6 +34,7 @@
 
     @include breakpoint-min-max(tablet,1300px){
         flex-direction: column;
+        padding-bottom: 2%;
     }
 }
 

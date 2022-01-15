@@ -25,7 +25,7 @@
 
     // 3844472_hamburger each stroke in SVG file must be change to match rest of icons 
     &__icon-2{
-        width: 90px;
+        width: 80px;
         height: 30px;
         padding-left: 20px;
     }
@@ -46,14 +46,14 @@
 
 // icon for selecting a dish on a restaurant menu
 
-.dish-selection{
+.menu__dish-selection{
 
-    &__icon{
+    &-icon{
         color: $tertiary-color;
         font-size: 25px;
     }
     
-    &__circle{
+    &-circle{
         visibility: hidden;
         width: 40px;
         height: 40px;
