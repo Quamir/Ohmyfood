@@ -13,6 +13,7 @@
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
     <header>
@@ -28,214 +29,153 @@
         </div>
 
 
-        <div class="menu-title-container">
-            <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Bastille" class="restaurant-img">
+        <div class="header-title-container">
 
-            <div class="menu-title">
+            <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="The Enchanted Plate" class="header__img">
+
+            <div class="header-title">
+
                 <div class="menu-title-text">
-                    <h1 class="page-title">The Enchanted Plate</h1>
+
+                    <h1 class="header__page-title">The Enchanted Plate</h1>
                     
                 </div>
-                <i class="far fa-heart page-like"></i>
+
+                <i class="far fa-heart header__page-like"></i>
             </div>
         </div>
+        
     </header>
 
     <section class="menu">
        
-        <div class="menu__card-wrapper">
+        <div class="menu__section-wrapper">
 
-            <div class="primary-card__wrapper">
-
-                <h2 class="section-title">ENTREES</h2>
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Foie Gras Ravioli</h3>
-                        <p class="primary-card__sub-text">With truffle cream</p>
-                    </div>
-                    <span class="primary-card__price">25€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-            <div class="primary-card__wrapper">
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Oscietra Caviar</h3>
-                        <p class="primary-card__sub-text">With buckwheat blinis</p>
-                    </div>
-                    <span class="primary-card__price">35€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-            <div class="primary-card__wrapper">
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Lobster and Leeek Foam</h3>
-                        <p class="primary-card__sub-text">Marinated with orange zest</p>
-                    </div>
-                    <span class="primary-card__price">20€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-            <div class="primary-card__wrapper">
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Duck Foie Gras</h3>
-                        <p class="primary-card__sub-text">With fig jam and grilled baguette</p>
-                    </div>
-                    <span class="primary-card__price">35€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </button>
-
-        </div>
-
-        <div class="menu__card-wrapper">
-
-            <h2 class="section-title">MAIN DISH</h2>
-
-            <div class="primary-card__wrapper">
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Fresh Buttered Scallops</h3>
-                        <p class="primary-card__sub-text">Woth white celery puree</p>
-                    </div>
-                    <span class="primary-card__price">40€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-            <div class="primary-card__wrapper">
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Pan-Fried Lobster</h3>
-                        <p class="primary-card__sub-text">With mashed sweet potatoes</p>
-                    </div>
-                    <span class="primary-card__price">35€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </button>
-
-            </div>
-
-            <div class="primary-card__wrapper">
-
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Citrus squid Carpaccio</h3>
-                        <p class="primary-card__sub-text">with orange zest</p>
-                    </div>
-                    <span class="primary-card__price">44€</span>
-
-                    <div class="dish-selection">
-
-                        <div class="dish-selection__circle">
-
-                            <i class="fas fa-check dish-selection__icon"></i>
-
-                        </div>
-
-                    </div>
-
-                </button>
-
-            </div>
-
+            <!-- py-1 padding class for frist title -->
             
+            <h2 class="menu__section-title py-1">ENTREES</h2>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Foie Gras Ravioli</h3>
+                        <p class="menu-card__sub-text">With truffle cream</p>
+                    </div>
+
+                    <span class="menu-card__price">25€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+
+                        </div>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+
+                    <div class="menu-card__text">
+
+                        <h3 class="menu-card__title">Oscietra Caviar</h3>
+                        <p class="menu-card__sub-text">With buckwheat blinis</p>
+
+                    </div>
+
+                    <span class="menu-card__price">35€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+    
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+    
+                        </div>
+    
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Lobster and leek Foam</h3>
+                        <p class="menu-card__sub-text">Marinated with orange zest</p>
+                    </div>
+                    <span class="menu-card__price">20€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+
+                        </div>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Duck Foie Gras</h3>
+                        <p class="menu-card__sub-text">With fig jam and grilled baguette</p>
+                    </div>
+                    <span class="menu-card__price">35€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+
+                        </div>
+
+                    </div>
+
+                </button>
+
+            </div>
+
 
         </div>
 
-        <div class="menu__card-wrapper">
+        <div class="menu__section-wrapper">
 
-            <h2 class="section-title">DESSRTS</h2>
+            <h2 class="menu__section-title">MAIN DISH</h2>
 
-            <div class="primary-card__wrapper">
+            <div class="menu-card__wrapper">
 
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Chocolate and Hazelnut Macarooms</h3>
-                        <p class="primary-card__sub-text">Revisted</p>
+                <button class="menu-card">
+
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Fresh Buttered Scallops</h3>
+                        <p class="menu-card__sub-text">With white celery puree</p>
                     </div>
-                    <span class="primary-card__price">18€</span>
 
-                    <div class="dish-selection">
+                    <span class="menu-card__price">40€</span>
 
-                        <div class="dish-selection__circle">
+                    <div class="menu__dish-selection">
 
-                            <i class="fas fa-check dish-selection__icon"></i>
+                        <div class="menu__dish-selection-circle">
+
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
 
                         </div>
 
@@ -245,43 +185,47 @@
 
             </div>
 
-            <div class="primary-card__wrapper">
+            <div class="menu-card__wrapper">
 
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Baba au </h3>
-                        <p class="primary-card__sub-text">with vanilla ice cream rhum</p>
+                <button class="menu-card">
+
+                    <div class="menu-card__text">
+
+                        <h3 class="menu-card__title">Pan-Fried Lobster</h3>
+                        <p class="menu-card__sub-text">With mashed sweet potatoes</p>
+
                     </div>
-                    <span class="primary-card__price">22€</span>
 
-                    <div class="dish-selection">
+                    <span class="menu-card__price">35€</span>
 
-                        <div class="dish-selection__circle">
+                    <div class="menu__dish-selection">
 
-                            <i class="fas fa-check dish-selection__icon"></i>
-
+                        <div class="menu__dish-selection-circle">
+    
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+    
                         </div>
-
+    
                     </div>
 
                 </button>
 
             </div>
 
-            <div class="primary-card__wrapper">
+            <div class="menu-card__wrapper">
 
-                <button class="primary-card">
-                    <div class="primary-card__text">
-                        <h3 class="primary-card__title">Lemon Meringue</h3>
-                        <p class="primary-card__sub-text">Destructed</p>
+                <button class="menu-card">
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Braised Ox Tail</h3>
+                        <p class="menu-card__sub-text">With wild rice and lemon zest</p>
                     </div>
-                    <span class="primary-card__price">23€</span>
+                    <span class="menu-card__price">44€</span>
 
-                    <div class="dish-selection">
+                    <div class="menu__dish-selection">
 
-                        <div class="dish-selection__circle">
+                        <div class="menu__dish-selection-circle">
 
-                            <i class="fas fa-check dish-selection__icon"></i>
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
 
                         </div>
 
@@ -292,10 +236,94 @@
             </div>
 
         </div>
+
+        <div class="menu__section-wrapper">
+
+            <h2 class="menu__section-title">DESSERTS</h2>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Chocolate and Hazelnut Macaroons</h3>
+                        <p class="menu-card__sub-text">With caramel butter ice cream</p>
+                    </div>
+
+                    <span class="menu-card__price">18€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+
+                        </div>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+
+                    <div class="menu-card__text">
+
+                        <h3 class="menu-card__title">Baba au rhum</h3>
+                        <p class="menu-card__sub-text">With lemin drizzle</p>
+
+                    </div>
+
+                    <span class="menu-card__price">22€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+    
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+    
+                        </div>
+    
+                    </div>
+
+                </button>
+
+            </div>
+
+            <div class="menu-card__wrapper">
+
+                <button class="menu-card">
+                    <div class="menu-card__text">
+                        <h3 class="menu-card__title">Lemon Meringue Pie</h3>
+                        <p class="menu-card__sub-text">Destructed</p>
+                    </div>
+                    <span class="menu-card__price">23€</span>
+
+                    <div class="menu__dish-selection">
+
+                        <div class="menu__dish-selection-circle">
+
+                            <i class="fas fa-check menu__dish-selection-icon"></i>
+
+                        </div>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </div>
+
 
         <button class="btn-order">
             <span class="btn-order__text">Order</span>
         </button>
+
+
     </section>
 
     <footer class="footer">

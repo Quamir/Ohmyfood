@@ -2,7 +2,6 @@
 .menu{
 
     &__section-wrapper{
-        height: 350px;
         @include flex(column,space-between,center);
         @include breakpoint-up(desktop){
             width: 500px;
@@ -18,14 +17,11 @@
         }
     }
 
-
     width: 100%;
     margin-top: 20px;
     height: max-content;
     padding-bottom: 55px;
     background-color: $primary-background-color;
-
-    
 
     
     &__section-title{
@@ -55,7 +51,6 @@
     }
     
 
-   
     &__dish-selection{
         width: 0;
         height: 100%;

@@ -27,21 +27,21 @@
 
 .header{
 
-&-title-container{
-    height: 250px;
+    &-title-container{
+        height: 250px;
 
-    @include breakpoint-up(desktop){
-        height: unset;
+        @include breakpoint-up(desktop){
+            height: unset;
     }
 }
 
-&__img{
-    width: 100%;
-    height: 254px;
-    object-fit: cover;
+    &__img{
+        width: 100%;
+        height: 254px;
+        object-fit: cover;
 
     
-    @include breakpoint-up(desktop){
+        @include breakpoint-up(desktop){
         width: 90%;
         margin-left: 5%;
         border-radius: 15px;
@@ -49,49 +49,35 @@
     }
 }
 
-&-title{
-    background-color: $primary-background-color;
-    border-radius: 35px 35px 0 0;
-    @include flex(row,space-between,center);
-    @include pos(relative,-47px,0);
+    &-title{
+        background-color: $primary-background-color;
+        border-radius: 35px 35px 0 0;
+        @include flex(row,space-between,center);
+        @include pos(relative,-47px,0);
 
-    @include breakpoint-up(desktop){
-        background-color: unset;
-        position: unset;
+        @include breakpoint-up(desktop){
+            background-color: unset;
+            position: unset;
+            padding-left: 20px;
+        }
+    }
+
+    &__page-title{
+        padding-top: 20px;
         padding-left: 20px;
+        white-space: nowrap;
+        @include font($page-title-size, bolder);
+
+        // Media queries
+        
+        @include breakpoint-up(desktop){
+            padding-left: 60px;
+            padding-right: 30px;
+        }
+
+        @include breakpoint-min-max(tablet,1300px){
+            padding-left: 60px;
+        }
     }
-}
-
-&__page-title{
-    padding-top: 20px;
-    padding-left: 20px;
-    @include font($page-title-size, bolder);
-
-    // Media queries
-    
-    @include breakpoint-up(desktop){
-        padding-left: 60px;
-        padding-right: 30px;
-    }
-
-    @include breakpoint-min-max(tablet,1300px){
-        padding-left: 60px;
-    }
-}
-
-&__page-like{
-    padding-top: 30px;
-    padding-right: 30px;
-    font-size: 30px;
-
-    @include breakpoint-up(desktop){
-       flex-grow: 1;
-       margin-left: auto;
-    }
-
-    @include breakpoint-min-max(tablet,1300px){
-        padding-right: 50px;
-    }
-}
 
 }

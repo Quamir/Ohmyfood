@@ -37,11 +37,84 @@
     }
 }
 
+// Icon for liking a restaurant page
+
+// Container elements styles are nested inside their childern 
+
+.header__page-like{
+
+    font-size: 18px;
+
+    &-container{
+        position: relative;
+        align-self: left;
+        justify-self: start;
+        flex-grow: 1;
+        
+    }
+
+    &:first-child{
+        color:red;
+        opacity: 0;
+        font-size: 35px;
+        transition: opacity .30s ease-in-out;
+        @include pos(absolute,-5%, -0.2%);
+
+        &:hover{
+            cursor: pointer;
+            color:green;
+            opacity: 1;
+            cursor: pointer;
+            background-image: $primary-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    padding-top: 30px;
+    padding-right: 30px;
+    font-size: 30px;
+
+    @include breakpoint-up(desktop){
+       flex-grow: 1;
+       margin-left: auto;
+    }
+
+    @include breakpoint-min-max(tablet,1300px){
+        padding-right: 50px;
+    }
+}
+
+
 // icon for liking a restaurant on the restaurant card 
+
+.restaurant-card__icon-container{
+    @include pos(relative,-20%,87%);
+}
 
 .restaurant-card__icon{
     padding-right: 20px;
-    font-size: 25px;
+    font-size: 26px;
+ 
+    
+    &:first-child{
+        opacity: 0;
+        font-size: 30px;
+        @include pos(absolute, -4%,-0.5%);
+        transition: opacity .30s ease-in-out;
+
+        &:hover{
+           opacity: 1;
+           cursor: pointer;
+           background-image: $primary-gradient;
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+        }
+
+    }
+
+   
+    
 }
 
 // icon for selecting a dish on a restaurant menu
