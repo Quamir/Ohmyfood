@@ -7,7 +7,7 @@
     &__text-wrapper{
         width: max-content;
         padding: 10px 0 0 27px;
-        @include flex(column,left,left);
+        @include flex(column,left,unset);
     }
 
     &__link{

@@ -43,37 +43,38 @@
 
 .header__page-like{
 
-    font-size: 18px;
+    padding-right: 15px;
+    padding-top: 30px;
+    font-size: 30px;
+    
 
     &-container{
         position: relative;
-        align-self: left;
-        justify-self: start;
-        flex-grow: 1;
         
+        &:hover{
+            cursor: pointer;
+    
+            .header__page-like:first-child{
+                opacity: 1;
+                background-image: $primary-gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+               
+            }
+    
+            .header__page-like:nth-child(2){
+                opacity: 0;
+            }
+        }
     }
 
     &:first-child{
-        color:red;
         opacity: 0;
         font-size: 35px;
         transition: opacity .30s ease-in-out;
         @include pos(absolute,-5%, -0.2%);
-
-        &:hover{
-            cursor: pointer;
-            color:green;
-            opacity: 1;
-            cursor: pointer;
-            background-image: $primary-gradient;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     }
-
-    padding-top: 30px;
-    padding-right: 30px;
-    font-size: 30px;
 
     @include breakpoint-up(desktop){
        flex-grow: 1;
@@ -81,7 +82,7 @@
     }
 
     @include breakpoint-min-max(tablet,1300px){
-        padding-right: 50px;
+        // padding-right: 50px;
     }
 }
 
@@ -89,33 +90,47 @@
 // icon for liking a restaurant on the restaurant card 
 
 .restaurant-card__icon-container{
-    @include pos(relative,-20%,87%);
+    @include pos(absolute,80%,87%);
+   
+    &:hover{
+        cursor: pointer;
+
+        .restaurant-card__icon:first-child{
+            opacity: 1;
+            background-image: $primary-gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+           
+        }
+
+        .restaurant-card__icon:nth-child(2){
+            opacity: 0;
+        }
+    }
 }
 
 .restaurant-card__icon{
     padding-right: 20px;
     font-size: 26px;
  
-    
     &:first-child{
+        background-image: $primary-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         opacity: 0;
-        font-size: 30px;
-        @include pos(absolute, -4%,-0.5%);
-        transition: opacity .30s ease-in-out;
-
-        &:hover{
-           opacity: 1;
-           cursor: pointer;
-           background-image: $primary-gradient;
-           -webkit-background-clip: text;
-           -webkit-text-fill-color: transparent;
-        }
-
+        background-image: $primary-gradient;
+        font-size: 25px;
+        @include pos(absolute, -5%, 0);
+        transition: opacity .25s ease-in;
     }
 
-   
-    
+    &:nth-child(2){
+        opacity: 1;
+    }
 }
+   
 
 // icon for selecting a dish on a restaurant menu
 

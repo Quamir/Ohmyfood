@@ -21,7 +21,7 @@
         @include breakpoint-up(desktop){
             height: 700px;
             padding: 0 5% 5% 5%;
-            @include flex(row,space-between,space-between);
+            @include flex(row,space-between,unset);
             flex-wrap: wrap;
         }
     }
