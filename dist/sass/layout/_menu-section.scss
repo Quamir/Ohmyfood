@@ -10,7 +10,7 @@
             @include flex(row,space-between,unset);
         }
 
- 
+        // this code is the makes each card in the wrapper visable one by one 
         .menu-card__wrapper:nth-of-type(1){
             opacity: 0;
             animation-name: ghost;
@@ -48,7 +48,7 @@
     }
 
     
-
+    // padding class
     .py-1{
         padding-top: 30px;
 
@@ -70,7 +70,7 @@
         margin-bottom: 15px;
         @include font($page-subtitle,lighter);
 
-    
+        //  makes the green underline 
         &::after{
             content: '';
             background: $tertiary-color;
