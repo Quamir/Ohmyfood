@@ -50,6 +50,11 @@
 
     &-container{
         position: relative;
+        @include pos(relative,0, -5%);
+
+        @include breakpoint-up(desktop){
+            @include pos(relative,0, 0);
+        }
         
         &:hover{
             cursor: pointer;
@@ -77,7 +82,7 @@
     }
 
     @include breakpoint-up(desktop){
-       flex-grow: 1;
+       padding-right: 100px;
        margin-left: auto;
     }
 

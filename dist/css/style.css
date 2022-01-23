@@ -231,6 +231,16 @@ button {
 }
 .header__page-like-container {
   position: relative;
+  position: relative;
+  top: 0;
+  left: -5%;
+}
+@media (min-width: 1366px) {
+  .header__page-like-container {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 .header__page-like-container:hover {
   cursor: pointer;
@@ -255,7 +265,7 @@ button {
 }
 @media (min-width: 1366px) {
   .header__page-like {
-    flex-grow: 1;
+    padding-right: 100px;
     margin-left: auto;
   }
 }
