@@ -5,9 +5,49 @@
         @include flex(column,space-between,center);
         @include breakpoint-up(desktop){
             width: 500px;
+            flex-wrap: wrap;
+            background-color: unset;
+            @include flex(row,space-between,unset);
         }
 
+ 
+        .menu-card__wrapper:nth-of-type(1){
+            opacity: 0;
+            animation-name: ghost;
+            animation-duration: 0.9s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+    
+        div:nth-of-type(2){
+            opacity: 0;
+            animation-name: ghost;
+            animation-duration: 0.9s;
+            animation-delay: 0.9s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        div:nth-of-type(3){
+            opacity: 0;
+            animation-name: ghost;
+            animation-duration: 0.9s;
+            animation-delay: 1.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        div:nth-of-type(4){
+            opacity: 0;
+            animation-name: ghost;
+            animation-duration: 0.9s;
+            animation-delay: 1s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
     }
+
+    
 
     .py-1{
         padding-top: 30px;
@@ -64,10 +104,12 @@
     }
 
     @include breakpoint-up(desktop){
-
        flex-wrap: wrap;
        background-color: unset;
-       @include flex(row,space-between,center);
+       @include flex(row,space-between,unset);
     }
 
 }
+
+// Keyframe animations 
+@include ghost-card-animation;   

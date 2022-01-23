@@ -1,3 +1,47 @@
+// page loading 
+
+@mixin loading-animation{
+
+    @keyframes spinner{
+        0%{
+           transform: rotate(0deg);
+         
+        }
+
+        25%{
+            border-bottom-color: $tertiary-color ;
+        }
+
+        50%{
+            border-top-color: $tertiary-color;
+            filter: brightness(90%);
+        }
+
+        
+        100%{
+           transform: rotate(720deg);
+        }
+    }
+
+    @keyframes disaper{
+
+        0%{
+            opacity: 1;
+            z-index: 500;
+        }
+       
+         90%{
+            opacity: 1;
+            z-index: 500;
+         }
+
+         100%{
+            opacity: 0;
+            z-index: -500;
+         }
+    }
+
+}
 
 // Frebch google translate Apparition progressive --> Gradual onset 
 // Apparition in english means ghost 
@@ -8,11 +52,23 @@
         0%{
             opacity: 0;
         }
-    
-        25%{
-            opacity: 25%;
+
+        15%{
+            opacity: 5%;
         }
     
+        25%{
+            opacity: 10%;
+        }
+
+        35%{
+            opacity: 20%;
+        }
+
+        45%{
+            opacity: 30%;
+        }
+
         50%{
             opacity: 50%;
         }
