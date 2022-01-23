@@ -22,7 +22,6 @@
         border-radius: 15px 15px 0 0;
     }
 
-   
     &-bottom{
         width: 100%;
         height: 30%;
@@ -44,7 +43,6 @@
     &__loc{
         @include font($primary-card-subtext-size,lighter);
     }
-
 
     @include breakpoint-up(desktop){
         width: 47%;
@@ -76,9 +74,7 @@
     background-color: #ffff;
     border-radius: 15px;
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
-    // animation-name: ghost;
-    // animation-duration: 1.7s;
-    // animation-timing-function: ease-out;
+  
     @include flex(row,space-between,center);
 
     &__text{
@@ -89,9 +85,6 @@
         text-align: start;
         padding-left: 13px;
         padding-top: 5px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
         white-space: nowrap;
 
     }
@@ -100,6 +93,10 @@
         padding-bottom: 5px;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include breakpoint-min-max(tablet,1300px){
+            font-size: 20px;
+        }
     }
 
 
@@ -108,11 +105,14 @@
         font-size: $primary-card-subtext-size;
         overflow: hidden;
         text-overflow: ellipsis;
+
+        @include breakpoint-min-max(tablet,1300px){
+            font-size: $primary-card-subtext-size + 4;
+
+        }
     }
 
     &__price{
-       
-        text-align: end;
         padding-top: 25px;
         padding-left: 5px;
         padding-right: 20px;
@@ -124,6 +124,7 @@
         height: 100%;
         background-color: $tertiary-color;
         border-radius: 0 15px 15px 0; 
+
         @include flex(row,center,center);
 
         transition-property: width;
@@ -139,41 +140,17 @@
         width: 30%;
     }
 
-    &:hover .menu-card__sub-text{
-
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
+   
     &:hover > .menu__dish-selection > div{
         visibility: visible;
         transform: rotate(-360deg);
     }
 
 
-    @include breakpoint-up(desktop){
-        .section-title{
-            color: red;
-        }
-    }
-
     @include breakpoint-min-max(tablet,1300px){
         width: 70%;
-
-        &__title{
-            font-size: 20px;
-        }
-
-        &__sub-text{
-            font-size: $primary-card-subtext-size + 4;
-
-        }
     }
-    
-   
 
 }
-
-
 
 

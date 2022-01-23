@@ -127,8 +127,9 @@
         opacity: 0;
         background-image: $primary-gradient;
         font-size: 25px;
-        @include pos(absolute, -5%, 0);
         transition: opacity .25s ease-in;
+
+        @include pos(absolute, -5%, 0);
     }
 
     &:nth-child(2){

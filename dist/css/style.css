@@ -4,7 +4,7 @@
 }
 
 /* The text-decoration: none gets rid of the underline on a tags 
-   the color: black keeps a tags from turning black  */
+   the color: black keeps a tags from turning blue  */
 a {
   text-decoration: none;
   color: black;
@@ -123,7 +123,7 @@ button {
   height: 50px;
   border-radius: 25px;
   background-image: linear-gradient(#E671DA 40%, #9356DC);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -132,6 +132,9 @@ button {
 .explore-restaurants-link div p {
   color: #ffff;
 }
+.explore-restaurants-link div:hover {
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
+}
 
 .instruction-btn {
   width: 325px;
@@ -139,7 +142,7 @@ button {
   background-color: #f6f6f6;
   border-radius: 15px;
   transition-duration: 450ms;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -148,6 +151,7 @@ button {
 .instruction-btn:hover {
   background-color: #f5edff;
   color: #f5edff;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
 .instruction-btn:hover i {
@@ -181,6 +185,7 @@ button {
 }
 .btn-order:hover {
   cursor: pointer;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 1366px) {
   .btn-order {
@@ -300,10 +305,10 @@ button {
   opacity: 0;
   background-image: linear-gradient(#E671DA 40%, #9356DC);
   font-size: 25px;
+  transition: opacity 0.25s ease-in;
   position: absolute;
   top: -5%;
   left: 0;
-  transition: opacity 0.25s ease-in;
 }
 .restaurant-card__icon:nth-child(2) {
   opacity: 1;
@@ -414,9 +419,6 @@ button {
   text-align: start;
   padding-left: 13px;
   padding-top: 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
   white-space: nowrap;
 }
 .menu-card__title {
@@ -424,14 +426,23 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media (min-width: 640px) and (max-width: 1300px) {
+  .menu-card__title {
+    font-size: 20px;
+  }
+}
 .menu-card__sub-text {
   width: 95%;
   font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media (min-width: 640px) and (max-width: 1300px) {
+  .menu-card__sub-text {
+    font-size: 19px;
+  }
+}
 .menu-card__price {
-  text-align: end;
   padding-top: 25px;
   padding-left: 5px;
   padding-right: 20px;
@@ -456,28 +467,13 @@ button {
 .menu-card:hover > .menu__dish-selection {
   width: 30%;
 }
-.menu-card:hover .menu-card__sub-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .menu-card:hover > .menu__dish-selection > div {
   visibility: visible;
   transform: rotate(-360deg);
 }
-@media (min-width: 1366px) {
-  .menu-card .section-title {
-    color: red;
-  }
-}
 @media (min-width: 640px) and (max-width: 1300px) {
   .menu-card {
     width: 70%;
-  }
-  .menu-card__title {
-    font-size: 20px;
-  }
-  .menu-card__sub-text {
-    font-size: 19px;
   }
 }
 
@@ -906,7 +902,7 @@ button {
 }
 .loader {
   width: 100%;
-  height: 250vh;
+  height: 247.5vh;
   baCkground: white;
   position: absolute;
   z-index: 500;

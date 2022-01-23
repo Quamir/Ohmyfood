@@ -3,6 +3,7 @@
     height: 32px;
     background-color: $primary-color;
     border-radius: 20px;
+
     @include flex(column,center,center);
     @include pos(relative,20%,4%);
 
@@ -14,6 +15,7 @@
     @include breakpoint-up(desktop){
         width: 32px;
         height: 32px;
+
         @include pos(relative,25%,4%);
      }
 
@@ -21,6 +23,7 @@
         width: 35px;
         height: 35px;
         margin-right: 10%;
+        
         @include pos(relative,30%,-2%);
      }
 }
