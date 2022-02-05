@@ -316,20 +316,20 @@ button {
 
 .menu__dish-selection-icon {
   color: #99e2d0;
-  font-size: 25px;
+  font-size: 0;
 }
 .menu__dish-selection-circle {
-  visibility: hidden;
-  width: 40px;
+  width: 10px;
   height: 40px;
+  border-radius: 25px 0px 0px 25px;
   background-color: #ffff;
-  border-radius: 25px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transition-delay: 350ms;
-  transition: all 0.4s ease-in;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .footer__icon {
@@ -449,7 +449,7 @@ button {
   font-weight: bold;
 }
 .menu-card__dish-selection {
-  width: 0;
+  width: 30%;
   height: 100%;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
@@ -457,23 +457,124 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
 }
 .menu-card:hover {
   cursor: pointer;
 }
 .menu-card:hover > .menu__dish-selection {
-  width: 30%;
+  animation: greenbox 1.7s forwards;
 }
 .menu-card:hover > .menu__dish-selection > div {
-  visibility: visible;
-  transform: rotate(-360deg);
+  animation: whitecircle 1.7s forwards;
+}
+.menu-card:hover > .menu__dish-selection > div > i {
+  animation: check 1s forwards;
 }
 @media (min-width: 640px) and (max-width: 1300px) {
   .menu-card {
     width: 70%;
+  }
+}
+@keyframes greenbox {
+  0% {
+    width: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 30%;
+    opacity: 1;
+  }
+}
+@keyframes greenboxrev {
+  0% {
+    width: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 30%;
+    opacity: 1;
+  }
+}
+@keyframes whitecircle {
+  0% {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  15% {
+    width: 20px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  20% {
+    width: 30px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  25% {
+    width: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  50% {
+    width: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  75% {
+    width: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+  100% {
+    width: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+}
+@keyframes check {
+  0% {
+    font-size: 0;
+    transform: rotate(0deg);
+  }
+  4% {
+    font-size: 0;
+    transform: rotate(5deg);
+  }
+  5% {
+    font-size: 0;
+    transform: rotate(11deg);
+  }
+  6% {
+    font-size: 0;
+    transform: rotate(22deg);
+  }
+  7% {
+    font-size: 0;
+    transform: rotate(0deg);
+  }
+  10% {
+    font-size: 0;
+    transform: rotate(45deg);
+  }
+  15% {
+    font-size: 0;
+    transform: rotate(90deg);
+  }
+  24% {
+    font-size: 24px;
+    transform: rotate(180deg);
+  }
+  25% {
+    font-size: 24px;
+    transform: rotate(-360deg);
+  }
+  30% {
+    font-size: 24px;
+    transform: rotate(-480deg);
+  }
+  100% {
+    font-size: 24px;
+    transform: rotate(-720deg);
   }
 }
 
@@ -566,7 +667,7 @@ button {
   }
 }
 .menu__dish-selection {
-  width: 0;
+  width: 0px;
   height: 100%;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
@@ -574,9 +675,6 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  transition-property: width;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in;
 }
 @media (min-width: 1366px) {
   .menu {
@@ -712,6 +810,7 @@ button {
   align-items: center;
 }
 .informative-wrapper {
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -902,7 +1001,7 @@ button {
 }
 .loader {
   width: 100%;
-  height: 247.5vh;
+  height: 100vh;
   baCkground: white;
   position: absolute;
   z-index: 500;
@@ -913,16 +1012,6 @@ button {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-}
-@media (min-width: 1366px) {
-  .loader {
-    height: 170.5vh;
-  }
-}
-@media (min-width: 640px) and (max-width: 1300px) {
-  .loader {
-    height: 359.5vh;
-  }
 }
 .loader__spinner {
   width: 100px;

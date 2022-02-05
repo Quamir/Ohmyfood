@@ -92,15 +92,13 @@
     
 
     &__dish-selection{
-        width: 0;
+        width: 0px;
         height: 100%;
         background-color: $tertiary-color;
         border-radius: 0 15px 15px 0; 
         @include flex(row,center,center);
 
-        transition-property: width;
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in;
+        
     }
 
     @include breakpoint-up(desktop){

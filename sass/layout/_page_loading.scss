@@ -1,7 +1,7 @@
 
 .loader{
     width: 100%;
-    height: 247.5vh;
+    height: 100vh;
     baCkground: white;
     position: absolute;
     z-index: 500;
@@ -13,13 +13,7 @@
 
     @include flex(column,flex-start,center);
      
-    @include breakpoint-up(desktop){
-        height: 170.5vh;
-    }
-
-    @include breakpoint-min-max(tablet,1300px){
-        height: 359.5vh;
-    }
+  
 
     &__spinner{
         width: 100px;
@@ -47,6 +41,7 @@
         }
     }
 
+    
     img{
         width: 300px;
         @include pos(relative,40vh , 0);
@@ -55,5 +50,6 @@
     @include loading-animation;
 
 }
+
 
 

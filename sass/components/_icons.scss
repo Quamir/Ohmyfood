@@ -144,19 +144,19 @@
 
     &-icon{
         color: $tertiary-color;
-        font-size: 25px;
+        font-size: 0;
     }
     
     &-circle{
-        visibility: hidden;
-        width: 40px;
+        // visibility: hidden;
+        width: 10px;
         height: 40px;
+        border-radius: 25px 0px  0px  25px;
         background-color: #ffff;
-        border-radius: 25px;
-        @include flex(row,center,center);
+      
 
-        transition-delay: 350ms;
-        transition: all 0.4s ease-in;
+        @include flex(row,center,center);
+        @include pos(relative, 0 , 0);        
     }
 }
 
