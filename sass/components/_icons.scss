@@ -1,7 +1,7 @@
 // the back arrow on the header
 .header-back-arrow{
     font-size: 23px;
-    padding-left: 10px;
+    padding-left: 15px;
 }
 
 // map marker for the location section of the header on the home page 
@@ -12,7 +12,7 @@
 //  styling for the 3 icons in instruction buttons on the home page 
 
 .instruction-btn{
-    //  !IMPORTANT          The second icons color is change through the SVG fill in XML 3844472_hamburger
+    //  !IMPORTANT      The second icons color is change through the SVG fill in XML 3844472_hamburger
     &__icon{
         color: #7e7e7e;
     }
@@ -76,9 +76,8 @@
 
     &:first-child{
         opacity: 0;
-        font-size: 35px;
         transition: opacity .30s ease-in-out;
-        @include pos(absolute,-5%, -0.2%);
+        @include pos(absolute,-5%, -0.1%);
     }
 
     @include breakpoint-up(desktop){
@@ -143,17 +142,19 @@
 .menu__dish-selection{
 
     &-icon{
+        font-size: 24px;
         color: $tertiary-color;
-        font-size: 0;
+        transition-delay: 0.5;
+        transition: all 1s ease-in-out;
     }
     
     &-circle{
-        // visibility: hidden;
-        width: 10px;
+        width: 40px;
         height: 40px;
-        border-radius: 25px 0px  0px  25px;
+        border-radius: 25px;
         background-color: #ffff;
-      
+        
+       
 
         @include flex(row,center,center);
         @include pos(relative, 0 , 0);        

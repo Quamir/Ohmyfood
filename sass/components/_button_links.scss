@@ -70,8 +70,6 @@
 .btn-order{
     width: 185px;
     height: 49px;
-    margin-top: 20px;
-    margin-left: 25%;
     border: none;
     font-size: $btn-text-size;
     border-radius: 20px;
@@ -86,13 +84,10 @@
 
 
     @include breakpoint-up(desktop){
-      margin-top:50px;
-      margin-left: auto;
-      margin-right: auto;
+     
     }
 
     @include breakpoint-min-max(tablet,1300px){
-        margin-top: 50px;
-        margin-left: 35%;
+    
     }
 }

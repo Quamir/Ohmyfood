@@ -119,39 +119,22 @@
         font-weight: bold;
     }
 
-    &__dish-selection{
-        width: 30%;
-        height: 100%;
-        background-color: $tertiary-color;
-        border-radius: 0 15px 15px 0; 
-
-        @include flex(row,center,center);
-
-    }
-
+   
     &:hover{
         cursor: pointer;
     }
 
     &:hover > .menu__dish-selection{
-       animation: greenbox 1.7s forwards;
-    }
-
-   
-    &:hover > .menu__dish-selection > div{
-        animation: whitecircle 1.7s forwards;
+        width: 30%;
     }
 
     &:hover > .menu__dish-selection > div > i{
-        animation: check 1s forwards;
+       transform: rotate(-360deg);
     }
-
 
     @include breakpoint-min-max(tablet,1300px){
         width: 70%;
     }
-
-    @include dish-select;
 
 }
 

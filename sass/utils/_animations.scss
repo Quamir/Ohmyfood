@@ -23,7 +23,7 @@
         }
     }
 
-    @keyframes disaper{
+    @keyframes disappear{
 
         0%{
             opacity: 1;
@@ -80,140 +80,6 @@
 }
 
 
-@mixin dish-select{
-    
-    @keyframes greenbox{
-        0%{
-            width: 0px;
-            opacity: 1;
-        }
-
-        
-        100%{
-            width: 30%;
-            opacity: 1;
-        }
-    }
-
-    @keyframes greenboxrev{
-        0%{
-            width: 0px;
-            opacity: 1;
-        }
-
-        
-        100%{
-            width: 30%;
-            opacity: 1;
-        }
-    }
-
-    @keyframes whitecircle{
-        0%{
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        15%{
-            width: 20px;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-        }
-
-        20%{
-           width: 30px;
-           border-top-right-radius: 25px;
-           border-bottom-right-radius: 25px;
-        }
-
-        25%{
-            width: 40px;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-        }
-
-        50%{
-            width: 40px;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-        }
-
-        75%{
-            width: 40px;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-        }
 
 
-        100%{
-            width: 40px;
-            border-top-right-radius: 25px;
-            border-bottom-right-radius: 25px;
-           
-        }
-    }    
-
-
-    
-
-    @keyframes check{
-        0%{
-            font-size: 0;
-            transform: rotate(0deg);
-        }
-
-        4%{
-            font-size: 0;
-            transform: rotate(5deg);
-        }
-
-
-        5%{
-            font-size: 0;
-            transform: rotate(11deg);
-        }
-
-        6%{
-            font-size: 0;
-            transform: rotate(22deg);
-        }
-
-        7%{
-            font-size: 0;
-            transform: rotate(0deg);
-        }
-
-        10%{
-            font-size: 0;
-            transform: rotate(45deg);
-        }
-
-        15%{
-            font-size: 0;
-            transform: rotate(90deg);
-        }
-
-        24%{
-            font-size: 24px;
-            transform: rotate(180deg);
-        }
-
-        25%{
-            font-size: 24px;
-            transform: rotate(-360deg);
-        }
-
-        30%{
-           font-size: 24px;
-           transform: rotate(-480deg);
-        }
-
-  
-       100%{
-           font-size: 24px;
-           transform: rotate(-720deg);
-       }
-    }
-
-}
 

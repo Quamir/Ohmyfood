@@ -1,44 +1,79 @@
 
 .loader{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     baCkground: white;
     position: absolute;
     z-index: 500;
 
-    animation-name: disaper;
-    animation-duration: 2.5s;
+    animation-name: disappear;
+    animation-duration: 15s;
     animation-fill-mode: forwards;
     
 
     @include flex(column,flex-start,center);
-     
-  
 
-    &__spinner{
-        width: 100px;
-        height: 100px;
-        border: 8px solid transparent;
+    @include breakpoint-up(desktop){
+      height: 171.5vh;
+    }
+
+    @include breakpoint-min-max(tablet,1300px){
+        height: 226vh;
+    }
+    
+    &__spinner-img{
+        position: fixed;
+        z-index: 501;
+        width: 100vw;
+        height: 100vh;
+
+        @include flex(column,center,center);
+
+        animation-name: disappear;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    &__spinner-container{
+        width: 100vw;
+        height: 100vh;
+        // border: 8px solid transparent;
         border-color: $primary-color;
-        border-radius: 50%;
-        position: absolute;
-
-        &-container{
-            position: relative;
-            @include flex(column,center,center);
-            @include pos(relative, 60vh, 0);
-        }
+        // border-radius: 50%;
+        position: fixed;
+        background-color: white;
+        @include flex(column,center,center);
 
 
-        &:nth-child(2){
-            border: 8px solid transparent;
-            border-right-color: $tertiary-color;
+        z-index: 500;
+
+        animation-name: disappear;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+
+    
+        div{
             position: absolute;
+            width: 50vw;
+            height: 50vw;
+            border: 8px solid transparent;
+            border-radius: 50%;
+            border-right-color: $tertiary-color;
+          
+
+            transform: translate(-50%, -50%);
 
             animation-name: spinner;
             animation-duration: 2s;
-            animation-iteration-count: 1;
+            animation-iteration-count: infinite;
+
+            @include breakpoint-up(desktop){
+                width: 35vw;
+                height: 35vw;
+            }
         }
+
+      
     }
 
     
@@ -49,7 +84,6 @@
 
     @include loading-animation;
 
+
+
 }
-
-
-

@@ -1,6 +1,7 @@
 
 .menu{
 
+   
     &__section-wrapper{
         @include flex(column,space-between,center);
         @include breakpoint-up(desktop){
@@ -10,7 +11,7 @@
             @include flex(row,space-between,unset);
         }
 
-        // this code is the makes each card in the wrapper visable one by one 
+        // this code makes each card in the wrapper visable one by one 
         .menu-card__wrapper:nth-of-type(1){
             opacity: 0;
             animation-name: ghost;
@@ -45,8 +46,9 @@
             animation-timing-function: ease-out;
             animation-fill-mode: forwards;
         }
-    }
 
+       
+    }
     
     // padding class
     .py-1{
@@ -88,26 +90,39 @@
         @include breakpoint-min-max(tablet,1300px){
             padding-left: 12%;
         }
+
+        
     }
     
 
     &__dish-selection{
-        width: 0px;
+        width: 0%;
         height: 100%;
         background-color: $tertiary-color;
         border-radius: 0 15px 15px 0; 
         @include flex(row,center,center);
 
-        
+        overflow: hidden;
+        transition-property: width;
+        transition-duration: 1.2s;
     }
 
     @include breakpoint-up(desktop){
        flex-wrap: wrap;
        background-color: unset;
-       @include flex(row,space-between,unset);
+    //    min-width: 1510px;
+       @include flex(row,space-between,center);
     }
 
+    &__btn{
+        width: 100%;
+        @include flex(column,center,center);
+    }
+    
 }
+
+
 
 // Keyframe animations 
 @include ghost-card-animation;   
+
