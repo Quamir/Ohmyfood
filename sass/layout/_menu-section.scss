@@ -46,8 +46,6 @@
             animation-timing-function: ease-out;
             animation-fill-mode: forwards;
         }
-
-       
     }
     
     // padding class
@@ -94,7 +92,6 @@
         
     }
     
-
     &__dish-selection{
         width: 0%;
         height: 100%;
@@ -119,10 +116,7 @@
         padding-top: 5%;
         @include flex(column,center,center);
     }
-    
 }
-
-
 
 // Keyframe animations 
 @include ghost-card-animation;   

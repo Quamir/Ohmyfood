@@ -81,13 +81,4 @@
         cursor: pointer;
         box-shadow: 0 2px 25px rgba(0, 0, 0, 0.5);
     }
-
-
-    @include breakpoint-up(desktop){
-     
-    }
-
-    @include breakpoint-min-max(tablet,1300px){
-    
-    }
 }

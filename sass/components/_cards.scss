@@ -66,7 +66,6 @@
         height: max-content;
         margin-bottom: 20px;
         @include flex(column,space-between,center);
-
     }
 
     width: 350px;
@@ -86,7 +85,6 @@
         padding-left: 13px;
         padding-top: 5px;
         white-space: nowrap;
-
     }
 
     &__title{

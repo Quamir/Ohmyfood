@@ -1,57 +1,40 @@
 
 .loader{
-    width: 100vw;
-    height: 100vh;
-    baCkground: white;
-    position: absolute;
-    z-index: 500;
-
-    animation-name: disappear;
-    animation-duration: 15s;
-    animation-fill-mode: forwards;
-    
-
-    @include flex(column,flex-start,center);
-
-    @include breakpoint-up(desktop){
-      height: 171.5vh;
-    }
-
-    @include breakpoint-min-max(tablet,1300px){
-        height: 226vh;
-    }
-    
+   
     &__spinner-img{
         position: fixed;
         z-index: 501;
         width: 100vw;
         height: 100vh;
 
+
         @include flex(column,center,center);
 
         animation-name: disappear;
         animation-duration: 2s;
         animation-fill-mode: forwards;
+
+        & img{
+            width: 92%;
+            @include breakpoint-up(desktop){
+                width: unset;
+            }
+        }
     }
 
     &__spinner-container{
         width: 100vw;
         height: 100vh;
-        // border: 8px solid transparent;
         border-color: $primary-color;
-        // border-radius: 50%;
         position: fixed;
         background-color: white;
         @include flex(column,center,center);
 
-
         z-index: 500;
-
         animation-name: disappear;
         animation-duration: 2s;
         animation-fill-mode: forwards;
 
-    
         div{
             position: absolute;
             width: 50vw;
@@ -71,19 +54,13 @@
                 width: 35vw;
                 height: 35vw;
             }
-        }
-
-      
+        }      
     }
 
-    
     img{
         width: 300px;
         @include pos(relative,40vh , 0);
     }
 
     @include loading-animation;
-
-
-
 }
