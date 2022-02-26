@@ -264,9 +264,10 @@ body {
     margin-left: auto;
   }
 }
+
 .restaurant-card__icon-container {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 87%;
 }
 .restaurant-card__icon-container:hover {
@@ -282,7 +283,6 @@ body {
 .restaurant-card__icon-container:hover .restaurant-card__icon:nth-child(2) {
   opacity: 0;
 }
-
 .restaurant-card__icon {
   padding-right: 20px;
   font-size: 26px;

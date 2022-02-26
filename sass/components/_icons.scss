@@ -1,167 +1,157 @@
 // the back arrow on the header
-.header-back-arrow{
-    font-size: 23px;
-    padding-left: 15px;
+.header-back-arrow {
+  font-size: 23px;
+  padding-left: 15px;
 }
 
-// map marker for the location section of the header on the home page 
-.location__map-marker{
-    padding-right: 15px;
+// map marker for the location section of the header on the home page
+.location__map-marker {
+  padding-right: 15px;
 }
 
-//  styling for the 3 icons in instruction buttons on the home page 
+//  styling for the 3 icons in instruction buttons on the home page
 
-.instruction-btn{
-    //  !IMPORTANT      The second icons color is change through the SVG fill in XML 3844472_hamburger
-    &__icon{
-        color: #7e7e7e;
-    }
+.instruction-btn {
+  //  !IMPORTANT      The second icons color is change through the SVG fill in XML 3844472_hamburger
+  &__icon {
+    color: #7e7e7e;
+  }
 
-    &__icon-1{
-        padding-left: 40px;
-        padding-right: 20px;
-        font-size: 25px;
-    }
+  &__icon-1 {
+    padding-left: 40px;
+    padding-right: 20px;
+    font-size: 25px;
+  }
 
-    // 3844472_hamburger each stroke in SVG file must be change to match rest of icons 
-    &__icon-2{
-        width: 80px;
-        height: 30px;
-        padding-left: 20px;
-    }
+  // 3844472_hamburger each stroke in SVG file must be change to match rest of icons
+  &__icon-2 {
+    width: 80px;
+    height: 30px;
+    padding-left: 20px;
+  }
 
-    &__icon-3{
-        font-size: 20px;
-        padding-left: 40px;
-        padding-right: 20px;
-    }
+  &__icon-3 {
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 20px;
+  }
 }
 
 // Icon for liking a restaurant page
 
-// Container elements styles are nested inside their childern 
+// Container elements styles are nested inside their childern
 
-.header__page-like{
+.header__page-like {
+  padding-right: 15px;
+  padding-top: 30px;
+  font-size: 30px;
 
-    padding-right: 15px;
-    padding-top: 30px;
-    font-size: 30px;
-    
-    &-container{
-        position: relative;
-        @include pos(relative,0, -5%);
+  &-container {
+    position: relative;
+    @include pos(relative, 0, -5%);
 
-        @include breakpoint-up(desktop){
-            @include pos(relative,0, 0);
-        }
-        
-        &:hover{
-            cursor: pointer;
-    
-            .header__page-like:first-child{
-                opacity: 1;
-                background-image: $primary-gradient;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-               
-            }
-    
-            .header__page-like:nth-child(2){
-                opacity: 0;
-            }
-        }
+    @include breakpoint-up(desktop) {
+      @include pos(relative, 0, 0);
     }
 
-    &:first-child{
-        opacity: 0;
-        transition: opacity .30s ease-in-out;
-        @include pos(absolute,-5%, -0.1%);
-    }
+    &:hover {
+      cursor: pointer;
 
-    @include breakpoint-up(desktop){
-       padding-right: 100px;
-       margin-left: auto;
-    }
-
-    @include breakpoint-min-max(tablet,1300px){
-        // padding-right: 50px;
-    }
-}
-
-
-// icon for liking a restaurant on the restaurant card 
-
-.restaurant-card__icon-container{
-    @include pos(absolute,80%,87%);
-   
-    &:hover{
-        cursor: pointer;
-
-        .restaurant-card__icon:first-child{
-            opacity: 1;
-            background-image: $primary-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-           
-        }
-
-        .restaurant-card__icon:nth-child(2){
-            opacity: 0;
-        }
-    }
-}
-
-.restaurant-card__icon{
-    padding-right: 20px;
-    font-size: 26px;
- 
-    &:first-child{
+      .header__page-like:first-child {
+        opacity: 1;
         background-image: $primary-gradient;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+
+      .header__page-like:nth-child(2) {
         opacity: 0;
-        background-image: $primary-gradient;
-        font-size: 25px;
-        transition: opacity .25s ease-in;
-
-        @include pos(absolute, -5%, 0);
+      }
     }
+  }
 
-    &:nth-child(2){
-        opacity: 1;
-    }
+  &:first-child {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    @include pos(absolute, -5%, -0.1%);
+  }
+
+  @include breakpoint-up(desktop) {
+    padding-right: 100px;
+    margin-left: auto;
+  }
 }
-   
+
+// icon for liking a restaurant on the restaurant card
+
+.restaurant-card__icon-container {
+  @include pos(absolute, 75%, 87%);
+
+  &:hover {
+    cursor: pointer;
+
+    .restaurant-card__icon:first-child {
+      opacity: 1;
+      background-image: $primary-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .restaurant-card__icon:nth-child(2) {
+      opacity: 0;
+    }
+  }
+
+  @include breakpoint-min-max(tablet, 1300px) {
+  }
+}
+
+.restaurant-card__icon {
+  padding-right: 20px;
+  font-size: 26px;
+
+  &:first-child {
+    background-image: $primary-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    background-image: $primary-gradient;
+    font-size: 25px;
+    transition: opacity 0.25s ease-in;
+
+    @include pos(absolute, -5%, 0);
+  }
+
+  &:nth-child(2) {
+    opacity: 1;
+  }
+}
 
 // icon for selecting a dish on a restaurant menu
 
-.menu__dish-selection{
+.menu__dish-selection {
+  &-icon {
+    font-size: 24px;
+    color: $tertiary-color;
+    transition-delay: 0.5;
+    transition: all 1s ease-in-out;
+  }
 
-    &-icon{
-        font-size: 24px;
-        color: $tertiary-color;
-        transition-delay: 0.5;
-        transition: all 1s ease-in-out;
-    }
-    
-    &-circle{
-        width: 40px;
-        height: 40px;
-        border-radius: 25px;
-        background-color: #ffff;
-        
-       
+  &-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: #ffff;
 
-        @include flex(row,center,center);
-        @include pos(relative, 0 , 0);        
-    }
+    @include flex(row, center, center);
+    @include pos(relative, 0, 0);
+  }
 }
 
-
-//  styling for footer icons  
-.footer__icon{
-    padding-right: 5px;
+//  styling for footer icons
+.footer__icon {
+  padding-right: 5px;
 }
